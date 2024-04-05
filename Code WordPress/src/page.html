@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
+    <title>Page</title>
+</head>
+
+<body id="top" class="">
+
+<!-- HAUT DE PAGE -->
+
+<header>
+    <nav class="bg-clrnav text-white p-4 font-retrogaming">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="p-2">
+                <a href="#top" class=""><img class="w-28" src="/src/assets/logo.svg" alt=""></a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="transition-all text-white sm:active:bg-clrtextsection rounded-lg  p-2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <div class="hidden justify-center items-center md:block">
+                <ul class="flex justify-center items-center space-x-4">
+                    <li><a href="#" class="transition-all hover:text-clrtextsection hover:underline">Informations</a></li>
+                    <li><a href="#" class="transition-all hover:text-clrtextsection hover:underline">Personnages</a></li>
+                    <li><a href="#" class="transition-all hover:text-clrtextsection hover:underline">Réseaux</a></li>
+                    <li><button href="#" class="transition-all rounded-md hover:bg-clrtextsection"><img class="w-28 h-auto" src="/src/assets/btnplay.svg" alt=""></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Burger pour les écrans mobiles -->
+    <div id="mobile-menu" class="md:hidden bg-clrnav text-white py-3 hidden">
+        <ul class="flex font-retrogaming flex-col items-center space-y-2">
+            <li><a href="#" class="transition-all hover:text-clrtextsection hover:underline">Informations</a></li>
+            <li><a href="#" class="transition-all hover:text-clrtextsection hover:underline">Personnages</a></li>
+            <li><a href="#" class="transition-all hover:text-clrtextsection hover:underline">Réseaux</a></li>
+            <li class="py-3"><a href="#" class="transition-all text-white active:bg-clrtextsection rounded-lg p-2">JOUER</a></li>
+
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</header>
+
+<!-- SECTION 1 -->
+
+<section class="">
+
+    <div class="sm:grid sm:grid-cols-1 sm:justify-items-center md:flex w-screen h-auto bg-clrnav p-20 sm:pb-5 md:pb-32 justify-center items-center sm:gap-5 md:gap-28 font-nunito">
+
+        <div class="flex sm:flex-col sm:items-center md:items-start w-96 gap-5 h-auto">
+            <p class="text-clrtextsection w-full sm:text-xs md:text-start sm:text-center md:text-base font-semibold">"Après un long sommeil dans un four brûlant, une galette se réveille, impatiente d'explorer le monde qui s'étend au-delà de la cuisine. Dans sa quête pour éviter les gourmands et découvrir de nouveaux horizons, elle roule courageusement vers l'aventure, prête à affronter les défis qui se dresseront sur son chemin."</p>
+        
+            <button href="#" class="w-28 h-auto transition-all rounded-md hover:bg-clrtextsection"><img class="w-max h-auto" src="/src/assets/btnplay.svg" alt=""></button>
+
+        </div>
+
+        <div class="sm:w-36 md:w-fit">
+            <img src="/src/assets/mascotte.svg" alt="" class="w-max h-auto"></div>
+
+    </div>
+
+
+</section>
+
+<!-- TRANSITION BUISSON -->
+
+<div class="bg-gradient-to-t to-clrnav from-clrtransitone scale-125 p-10">
+
+    <img class="w-max h-auto" src="/src/assets/transition-one.svg" alt="">
+
+</div>
+
+<!-- SECTION CAROUSEL -->
+
+<div class="w-screen h-auto sm:p-10 md:p-20 bg-clrtransitone">
+    <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-72 overflow-hidden rounded-xl md:h-96">
+            <!-- Image 1 -->
+            <div class="hidden duration-700 ease-in-out group/image1" data-carousel-item="active">
+                <img src="/src/assets/canyon.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute h-full w-full bg-clrnav/80 flex flex-col gap-2 items-center justify-center -bottom-10 group-hover/image1:bottom-0 opacity-0 group-hover/image1:opacity-100 transition-all duration-300 text-white">
+
+                    <img class="transition-all hover:scale-105 hover:rotate-12" src="/src/assets/bar.svg" alt="">
+                    <p class="font-nunito text-lg">“Sautez en utilisant la touche espace !”</p>
+
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="hidden duration-700 ease-in-out group/image2" data-carousel-item>
+                <img src="/src/assets/night.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute h-full w-full bg-clrtextsection/80 flex flex-col gap-2 items-center justify-center -bottom-10 group-hover/image2:bottom-0 opacity-0 group-hover/image2:opacity-100 transition-all duration-300 text-white">
+
+                    <img class="w-32 transition-all hover:scale-105 hover:rotate-12" src="/src/assets/crown.svg" alt="">
+                    <p class="w-full font-nunito text-base text-center">“Récolter les fèves sur votre passage pour récolter un maximum de points !”</p>
+                </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="hidden duration-700 ease-in-out group/image3" data-carousel-item>
+                <img src="/src/assets/montains.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute h-full w-full bg-clrtextsection/80 flex flex-col gap-2 items-center justify-center -bottom-10 group-hover/image3:bottom-0 opacity-0 group-hover/image3:opacity-100 transition-all duration-300 text-white">
+
+                    <img class="w-32" src="/src/assets/crown.svg" alt="">
+                    <p class="w-72 font-nunito text-base text-center">“Récolter les fèves sur votre passage pour récolter un maximum de points !”</p>
+                </div>
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" class="w-5 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-5 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-5 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex transition-all duration-300 items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 dark:group-hover:bg-cyan-400/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-white-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 dark:group-hover:bg-cyan-400/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+<!-- TRANSITION ROCHES -->
+
+<div class="bg-gradient-to-t to-clrtransitone from-clrbgcards scale-125 p-10">
+
+    <img class="w-max h-auto scale-105" src="/src/assets/transition-two.svg" alt="">
+
+</div>
+
+<!-- SECTION 3 -->
+
+<div class="grid justify-items-center sm:flex-col md:grid-cols-3 gap-5 bg-clrbgcards p-10">
+
+    <!-- CARD GALETTE -->
+        <div class="sm:w-64 md:w-max h-auto  flex flex-row m-5 bg-gradient-to-t to-clrnav from-clrtransitone rounded-3xl relative transition-all hover:cursor-pointer hover:scale-105 text-black hover:text-clrtextsection">
+
+            <div class="flex sm:flex-col md:flex-row sm:gap-2 justify-center items-center md:gap-5 m-5">
+
+                <img class=" w-32 z-10 h-auto" src="/src/assets/chara1.svg" alt="">
+
+                <img class="absolute z-20 w-96 rounded-full sm:right-0 sm:-bottom-2 md:right-3 md:-bottom-2 sm:opacity-100 md:opacity-50" src="/src/assets/bgcard-one.svg" alt="">
+
+                <div class="sm:w-full md:w-52 z-40 flex justify-center sm:items-center md:items-start flex-col sm:text-sm lg:text-base text-center">
+                    <p class="font-retrogaming w-full">BLUD</p>
+                
+                    <p class="w-full font-semibold font-nunito">La galette !</p>
+
+                    <p class="w-full font-semibold font-nunito py-3">BLUD est une galette qui a prit vie dans un four ! Il voyage pour découvrir et le personnage principal !</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    <!-- CARD OISEAU -->
+
+    <div class="sm:w-64 md:w-max h-auto flex flex-row m-5 bg-gradient-to-t to-clrtextnav from-clrcardtwo rounded-3xl relative transition-all hover:cursor-pointer hover:scale-105 text-black hover:text-clrtextsection">
+
+        <div class="flex sm:flex-col md:flex-row sm:gap-2 justify-center items-center md:gap-5 m-5">
+
+            <img class=" w-32 z-30 h-auto" src="/src/assets/chara2.svg" alt="">
+
+            <img class="absolute z-20 w-96 rounded sm:right-0 sm:bottom-2 md:right-2 md:bottom-3" src="/src/assets/bgcard-two.svg" alt="">
+
+            <div class="sm:w-full md:w-52 z-40 flex justify-center sm:items-center md:items-start flex-col sm:text-sm lg:text-base text-center">
+                <p class="font-retrogaming w-full">BLUD</p>
+            
+                <p class="w-full font-semibold font-nunito">La galette !</p>
+
+                <p class="w-full font-semibold font-nunito py-3">BLUD est une galette qui a prit vie dans un four ! Il voyage pour découvrir et le personnage principal !</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- CARD RENARD -->
+
+    <div class="sm:w-64 md:w-max h-auto flex flex-row m-5 bg-gradient-to-t to-clrtransitone from-clrbgcardthree rounded-3xl relative transition-all hover:cursor-pointer hover:scale-105 text-black hover:text-clrnav">
+
+        <div class="flex sm:flex-col md:flex-row sm:gap-2 justify-center items-center md:gap-5 m-5">
+
+            <img class=" w-32 z-30 h-auto" src="/src/assets/chara3.svg" alt="">
+
+            <img class="absolute z-20 w-96 rounded sm:right-0 sm:bottom-0 md:right-2 md:bottom-3" src="/src/assets/bgcard-three.svg" alt="">
+
+            <div class="sm:w-full md:w-52 z-40 flex justify-center sm:items-center md:items-start flex-col sm:text-sm lg:text-base text-center">
+                <p class="font-retrogaming w-full">BLUD</p>
+            
+                <p class="w-full font-semibold font-nunito">La galette !</p>
+
+                <p class="w-full font-semibold font-nunito py-3">BLUD est une galette qui a prit vie dans un four ! Il voyage pour découvrir et le personnage principal !</p>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+ <!-- BAS DE PAGE -->
+
+    <footer class="w-screen h-auto p-10 bg-bgfooter">
+
+        <div class="w-full h-auto font-retrogaming flex flex-col justify-center items-center gap-10">
+            
+            <a href="#top" class="w-1/4 h-auto cursor-pointer p-5 transition-all hover:scale-105"><img class="" src="/src/assets/Logofooter.svg" alt=""></a>
+
+            <div class="w-fit h-auto flex md:flex-row justify-center items-center gap-5 sm:flex-col">
+
+                <!-- Logo App Store -->
+
+                <a href="https://www.apple.com/fr/app-store/"><img class="w-52 h-auto transition-all ease-in cursor-pointer hover:scale-110 hover:border-opacity-0" src="/src/assets/app-store.svg" alt="Logo App Store"></a>
+                    
+            <!-- Logo Play Store -->
+
+                <a href="https://play.google.com/store/games?device=windows"><img class="w-52 h-auto transition-all ease-in cursor-pointer hover:scale-110 hover:border-opacity-0" src="/src/assets/Play-store.svg" alt="Logo Play Store"></a>    
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
